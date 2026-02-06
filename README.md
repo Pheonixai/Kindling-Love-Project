@@ -46,5 +46,7 @@ Spark Channels: Managed, time-limited (10-minute) chat connections triggered onl
 ---
 
 Colour Palette: I implemented the "Pink Sorbet" theme, utilizing soft, warm hex codes (#F4978E, #F8AD9D) to evoke a sense of affection and safety without overstimulating the user.
+
 Typography: The design utilizes Inter Bold for structural clarity, contrasted with soft, italicized serifs to highlight emotional keywords and pull-quotes.
+
 Layout Design: I employed a "Soft Bento" modular grid alongside Glassmorphic navigation to create an interface that feels organized yet organic, inspired by modern wellness aesthetics found on Dribbble.
