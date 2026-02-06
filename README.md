@@ -1,4 +1,4 @@
-Kindling — A Space to be Seen
+**Kindling — A Space to be Seen**
 
 Project Overview
 
