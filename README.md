@@ -26,6 +26,7 @@ Design Document - https://docs.google.com/document/d/1FKs8DCOKQXL7vzuxrV18N3Ext8
 ---
 
 **Project Name: Kindling**
+
 **Problem Statement:** Addressing the digital invisibility and social noise that often alienates introverted individuals or those seeking quiet support.
 
 **Target Audience:** Introverts, individuals seeking anonymous emotional refuge, and those desiring brief, authentic human connections.
