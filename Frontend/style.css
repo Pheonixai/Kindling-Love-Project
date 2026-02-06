@@ -89,7 +89,7 @@
             letter-spacing: -0.05em; 
             line-height: 1.1; 
             margin-bottom: 1.5rem;
-            margin-top: 6.6rem;
+            margin-top: 13.6rem;
         }
 
         .hero-section h1 em {
@@ -109,6 +109,7 @@
         .cta-group { 
             display: flex; 
             gap: 1.25rem; 
+            margin-bottom: 35px;
         }
 
         .btn {
