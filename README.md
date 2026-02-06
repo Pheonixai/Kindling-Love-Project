@@ -26,8 +26,9 @@ Design Document - https://docs.google.com/document/d/1FKs8DCOKQXL7vzuxrV18N3Ext8
 ---
 
 **Project Name: Kindling**
-Problem Statement: Addressing the digital invisibility and social noise that often alienates introverted individuals or those seeking quiet support.
-Target Audience: Introverts, individuals seeking anonymous emotional refuge, and those desiring brief, authentic human connections.
+**Problem Statement:** Addressing the digital invisibility and social noise that often alienates introverted individuals or those seeking quiet support.
+
+**Target Audience:** Introverts, individuals seeking anonymous emotional refuge, and those desiring brief, authentic human connections.
 
 **Core Features:**
 
@@ -46,10 +47,3 @@ Spark Channels: Managed, time-limited (10-minute) chat connections triggered onl
 Colour Palette: I implemented the "Pink Sorbet" theme, utilizing soft, warm hex codes (#F4978E, #F8AD9D) to evoke a sense of affection and safety without overstimulating the user.
 Typography: The design utilizes Inter Bold for structural clarity, contrasted with soft, italicized serifs to highlight emotional keywords and pull-quotes.
 Layout Design: I employed a "Soft Bento" modular grid alongside Glassmorphic navigation to create an interface that feels organized yet organic, inspired by modern wellness aesthetics found on Dribbble.
-
-**Tech Stack:**
-
-Frontend: HTML5 and CSS for responsive, utility-first design.
-
-Animations: Framer Motion (or CSS Transitions) to ensure every interaction feels "soft" and deliberate.
-
