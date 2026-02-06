@@ -1,4 +1,4 @@
-**Kindling - A Space to be Seen**
+**KINDLING - A SPACE TO BE SEEN**
 ---
 
 **Project Overview**
@@ -18,6 +18,7 @@ Vercel URL:
 ---
 
 Case Study Document - https://docs.google.com/document/d/1jRVR9ycD1vFRID3hNQyJAocZVh3TF1Nmh6fa8tuft1Q/edit?usp=sharing
+
 Design Document - https://docs.google.com/document/d/1FKs8DCOKQXL7vzuxrV18N3Ext8lRB8awrJnaAzFj6Bg/edit?usp=sharing
 
 ---
@@ -40,6 +41,7 @@ Spark Channels: Managed, time-limited (10-minute) chat connections triggered onl
 
 ---
  **Design Documentation**
+---
 
 Colour Palette: I implemented the "Pink Sorbet" theme, utilizing soft, warm hex codes (#F4978E, #F8AD9D) to evoke a sense of affection and safety without overstimulating the user.
 Typography: The design utilizes Inter Bold for structural clarity, contrasted with soft, italicized serifs to highlight emotional keywords and pull-quotes.
