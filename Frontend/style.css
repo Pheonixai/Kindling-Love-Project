@@ -134,7 +134,7 @@
             border: 1px solid rgba(0,0,0,0.05); 
         }
 
-        /* HOW SECTION */
+        /* FEATURES SECTION */
         #features { 
             padding: 100px 8%; 
             background: #fff; 
@@ -206,7 +206,7 @@
              letter-spacing: 0.1em; 
             }
 
-        /* GARDEN SECTION - FIXED */
+        /* GARDEN SECTION*/
         #garden { padding: 100px 8%; }
         .garden-container {
             background: white; 
