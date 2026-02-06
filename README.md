@@ -12,13 +12,15 @@ Team : Team G
 ---
 
 Vercel URL: 
+
 ---
 **Project Documentation**
+---
 
 Case Study Document - https://docs.google.com/document/d/1jRVR9ycD1vFRID3hNQyJAocZVh3TF1Nmh6fa8tuft1Q/edit?usp=sharing
-
 Design Document - https://docs.google.com/document/d/1FKs8DCOKQXL7vzuxrV18N3Ext8lRB8awrJnaAzFj6Bg/edit?usp=sharing
-----
+
+---
 **Brainstorm & Case Study**
 ---
 
