@@ -42,11 +42,15 @@ Visual Love Garden: A real-time data visualization of community empathy, where c
 Spark Channels: Managed, time-limited (10-minute) chat connections triggered only by mutual resonance to prevent harassment.
 
 ---
- **Design Documentation**
+**Styling Guide**
 ---
 
-Colour Palette: I implemented the "Pink Sorbet" theme, utilizing soft, warm hex codes (#F4978E, #F8AD9D) to evoke a sense of affection and safety without overstimulating the user.
+Kindling’s interface is built around a soft, emotionally neutral design system.
 
-Typography: The design utilizes Inter Bold for structural clarity, contrasted with soft, italicized serifs to highlight emotional keywords and pull-quotes.
+The project uses a centralized CSS variable system with a custom “Pink Sorbet” palette (#F4978E, #F8EDEB, #DAADAF) to evoke warmth and safety without overstimulation. Instead of pure black and white, softened charcoal and sand tones reduce visual tension.
 
-Layout Design: I employed a "Soft Bento" modular grid alongside Glassmorphic navigation to create an interface that feels organized yet organic, inspired by modern wellness aesthetics found on Dribbble.
+Typography is based on Inter, chosen for clarity and neutrality. Light headline weights reduce visual aggression, while muted secondary text minimizes cognitive load.
+
+The layout uses rounded geometry, generous spacing, and glassmorphic navigation to create structure without dominance. Subtle motion and organic animations in the Love Garden visualization reinforce the metaphor of shared empathy rather than gamified interaction.
+
+All styling decisions prioritize calmness, clarity, and emotional safety.
