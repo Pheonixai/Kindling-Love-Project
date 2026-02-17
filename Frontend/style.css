@@ -30,7 +30,7 @@
             --space-1: 0.5rem; /*10px*/
             --space-2: 0.75rem; /*15px*/
             --space-3: 1.0rem;   /*20px*/
-            --space-4: 1.1rem;   /*22px*/
+            --space-4: 1.2rem;   /*22px*/
             --space-5: 1.25rem; /*25px*/
             --space-5: 1.5rem;   /*30px*/
             --space-6: 2.5rem;   /*50px*/
@@ -200,7 +200,7 @@
         .nav-links a {
             text-decoration: none; 
             color: var(--text-muted);
-            font-size: var(--space-4); 
+            font-size: var(--space-2); 
             font-weight: bolder; 
             margin-left: 2rem;
             transition: var(--transition);
@@ -238,6 +238,7 @@
             color: var(--text-main);
             margin-bottom: 3rem; 
             font-weight: 300;
+            max-width: var(--width-lg);
         }
 
         .cta-group { 
@@ -344,7 +345,7 @@
             color: var(--pink-sorbet);
              font-weight: 700; 
              text-transform: uppercase; 
-             font-size: var(--space-5); 
+             font-size: var(--space-3); 
              letter-spacing: 0.1em; 
             }
 
@@ -361,12 +362,15 @@
             box-shadow: var(--shadow);
         }
         .garden-viz {
-            height: 400px;
+            height: 100%;
+            max-height: var(--height-lg);
             background-image: url("sakura-love-garden.png"); 
             display: flex; 
-            max-width: var(--width-md);
+            margin: auto;
+            width: 200px;
             gap: 30px; 
         }
+
         .stalk {
             width: 6px; 
             height: 0; 
