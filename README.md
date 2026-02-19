@@ -12,7 +12,7 @@ Team : Team G
 ---
 
 Vercel URL: 
-
+https://kindling-love-project.vercel.app/
 ---
 **Project Documentation**
 ---
