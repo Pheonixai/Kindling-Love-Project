@@ -14,13 +14,13 @@
             --font-stack: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
-            --container-bg: 30rem;
+            --container-bg: 35rem;
             --border-radius: 1.0rem;
             --color-container: white;
         
 
             --border-radius-btn: 50px;
-            --btn-bg: 5rem;
+            --btn-bg: 9rem;
             --btn-sm: 2.5rem; 
 
             /*font-scale*/
@@ -114,7 +114,7 @@
         }
 
         .prompt-container button {
-            padding: var(--space-1);
+            padding: var(--space-2);
             border-radius: var(--border-radius-btn);
             border: none;
             background-color: var(--pink-sorbet);
@@ -130,15 +130,20 @@
 
         .resPosts {
             background-color: rgba(244, 151, 142, 0.5);
-            width: var(--container-bg);
+            max-width: var(--container-bg);
             border-radius: var(--border-radius);
             margin: 20px auto;
-            height: var(--height-sm);
+            height: 100%;
             padding: var(--space-3);
         }
 
+        .flex {
+            display: flex;
+            justify-content: space-between;
+        }
+
         .resPosts>p {
-            font-size: var(--space-2);
+            font-size: var(--space-3);
             font-family:'Times New Roman', Times, serif;
             font-style: italic;
         }
@@ -158,8 +163,8 @@
             background-color: var(--color-container);
             border: none;
             border-radius: var(--border-radius);
-            width: var(--btn-sm);
-            padding: var(--space-0);
+            width: var(--btn-lg);
+            padding: var(--space-1);
             color: var(--pink-sorbet);
         }
 
