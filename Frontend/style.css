@@ -20,8 +20,8 @@
         
 
             --border-radius-btn: 50px;
-            --btn-bg: 9rem;
-            --btn-sm: 6rem; 
+            --btn-bg: 5rem;
+            --btn-sm: 2.5rem; 
 
             /*font-scale*/
             --font-size: 20px;
@@ -48,6 +48,8 @@
             --width-lg: 40rem;
 
         }
+
+
 
         * {
             box-sizing: border-box;
@@ -83,9 +85,6 @@
             border-bottom: 1px solid rgba(0,0,0,0.03);
         }
         
-        img {
-            max-width: 20rem;
-        }
 
         .prompt-container {
             background-color: var(--color-container);
@@ -351,6 +350,7 @@
 
         /* GARDEN SECTION*/
         #garden { 
+            margin: auto;
             padding: 100px 8%; 
             text-align: center;
         }
@@ -362,12 +362,11 @@
             box-shadow: var(--shadow);
         }
         .garden-viz {
-            height: 100%;
-            max-height: var(--height-lg);
+            height: 400px;
             background-image: url("sakura-love-garden.png"); 
             display: flex; 
+            width: 500px;
             margin: auto;
-            width: 200px;
             gap: 30px; 
         }
 
