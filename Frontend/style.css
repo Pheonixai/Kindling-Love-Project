@@ -370,7 +370,7 @@
             height: 400px;
             background-image: url("sakura-love-garden.png"); 
             display: flex; 
-            width: 500px;
+            width: 600px;
             margin: auto;
             gap: 30px; 
         }
@@ -422,6 +422,506 @@
             60%, 80% { transform: translateX(-50%) scale(1); }
             100% { transform: translateX(-50%) scale(0); opacity: 0; }
         }
+
+/*-------------------------------------------------------*/
+    .hero {
+      padding: 160px 48px 80px;
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--dusty-rose);
+      margin-bottom: 20px;
+      animation: fadeUp 0.8s ease both;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--charcoal);
+      margin-bottom: 24px;
+      animation: fadeUp 0.8s 0.1s ease both;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--pink-sorbet);
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text-muted);
+      max-width: 500px;
+      margin: 0 auto 40px;
+      font-weight: 300;
+      animation: fadeUp 0.8s 0.2s ease both;
+    }
+
+    .hero-stat {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--white);
+      border: 1px solid rgba(218, 173, 175, 0.3);
+      border-radius: 100px;
+      padding: 10px 22px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      animation: fadeUp 0.8s 0.3s ease both;
+    }
+
+    .hero-stat .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--pink-sorbet);
+      animation: pulse 2s infinite;
+    }
+
+    /* ── GARDEN SCENE ── */
+    .garden-wrapper {
+      padding: 0 24px 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .garden-canvas {
+      background: var(--white);
+      border-radius: 32px;
+      border: 1px solid rgba(218, 173, 175, 0.2);
+      box-shadow: var(--shadow);
+      padding: 48px;
+      position: relative;
+      overflow: hidden;
+      min-height: 520px;
+    }
+
+    /* Soft gradient orbs in the background */
+    .garden-canvas::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 380px; height: 380px;
+      background: radial-gradient(circle, rgba(244, 151, 142, 0.12) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .garden-canvas::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -40px;
+      width: 280px; height: 280px;
+      background: radial-gradient(circle, rgba(218, 173, 175, 0.14) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .garden-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 40px;
+    }
+
+    .garden-title {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: var(--charcoal);
+    }
+
+    .garden-title small {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .garden-filter {
+      display: flex;
+      gap: 8px;
+    }
+
+    .filter-pill {
+      border: 1px solid rgba(218,173,175,0.4);
+      background: transparent;
+      border-radius: 100px;
+      padding: 7px 16px;
+      font-size: 0.75rem;
+      font-family: var(--font-body);
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.25s;
+      letter-spacing: 0.04em;
+    }
+
+    .filter-pill:hover {
+      border-color: var(--pink-sorbet);
+      color: var(--pink-sorbet);
+    }
+
+    .filter-pill.active {
+      background: var(--pink-sorbet);
+      border-color: var(--pink-sorbet);
+      color: white;
+    }
+
+    /* ── FLOWERS / POSTS ── */
+    .flowers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .flower-card {
+      background: var(--soft-sand);
+      border-radius: 20px;
+      padding: 24px 20px;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s;
+      border: 1px solid rgba(218,173,175,0.15);
+      animation: bloomIn 0.6s ease both;
+    }
+
+    .flower-card:nth-child(1) { animation-delay: 0.0s; }
+    .flower-card:nth-child(2) { animation-delay: 0.07s; }
+    .flower-card:nth-child(3) { animation-delay: 0.14s; }
+    .flower-card:nth-child(4) { animation-delay: 0.21s; }
+    .flower-card:nth-child(5) { animation-delay: 0.28s; }
+    .flower-card:nth-child(6) { animation-delay: 0.35s; }
+    .flower-card:nth-child(7) { animation-delay: 0.42s; }
+    .flower-card:nth-child(8) { animation-delay: 0.49s; }
+    .flower-card:nth-child(9) { animation-delay: 0.56s; }
+
+    .flower-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(244,151,142,0.12);
+    }
+
+    /* Bloom stage indicator */
+    .flower-bloom {
+      font-size: 2rem;
+      margin-bottom: 14px;
+      display: block;
+      line-height: 1;
+      transition: transform 0.3s;
+    }
+
+    .flower-card:hover .flower-bloom {
+      transform: scale(1.15) rotate(5deg);
+    }
+
+    .flower-card.blooming .flower-bloom {
+      animation: sway 3s ease-in-out infinite;
+    }
+
+    .flower-quote {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--charcoal);
+      margin-bottom: 16px;
+    }
+
+    .flower-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .flower-resonance {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .resonance-hearts {
+      display: flex;
+      gap: 2px;
+    }
+
+    .resonance-hearts span {
+      font-size: 0.65rem;
+      opacity: 0;
+      animation: heartAppear 0.3s ease both;
+    }
+
+    .resonance-hearts span:nth-child(1) { opacity: 1; }
+    .resonance-hearts span:nth-child(2) { opacity: 1; }
+    .resonance-hearts span:nth-child(3) { opacity: 1; }
+    .resonance-hearts span:nth-child(4) { opacity: 0.5; }
+    .resonance-hearts span:nth-child(5) { opacity: 0.25; }
+
+    .flower-age {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* Spark indicator */
+    .spark-badge {
+      position: absolute;
+      top: 14px; right: 14px;
+      width: 8px; height: 8px;
+      background: var(--pink-sorbet);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(244,151,142,0.2);
+    }
+
+    .spark-badge.active {
+      animation: sparkPulse 1.8s ease-in-out infinite;
+    }
+
+    /* ── YOUR POST CTA ── */
+    .flower-card.your-post {
+      border: 1.5px dashed rgba(218,173,175,0.5);
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 10px;
+      min-height: 160px;
+    }
+
+    .flower-card.your-post:hover {
+      border-color: var(--pink-sorbet);
+      background: rgba(244,151,142,0.04);
+    }
+
+    .post-icon {
+      font-size: 1.6rem;
+    }
+
+    .post-label {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--dusty-rose);
+    }
+
+    .post-sub {
+      font-size: 0.73rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ── GROWTH BAR ── */
+    .garden-growth {
+      margin-top: 40px;
+      background: var(--white);
+      border-radius: 24px;
+      border: 1px solid rgba(218,173,175,0.2);
+      padding: 28px 36px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .growth-label {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 300;
+      color: var(--charcoal);
+      flex-shrink: 0;
+    }
+
+    .growth-label small {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .growth-track {
+      flex: 1;
+      min-width: 200px;
+      height: 6px;
+      background: rgba(218,173,175,0.2);
+      border-radius: 100px;
+      overflow: hidden;
+    }
+
+    .growth-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--dusty-rose), var(--pink-sorbet));
+      border-radius: 100px;
+      animation: fillGrow 1.8s 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+    }
+
+    .growth-stats {
+      display: flex;
+      gap: 32px;
+      flex-shrink: 0;
+    }
+
+    .g-stat {
+      text-align: center;
+    }
+
+    .g-stat-num {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: var(--charcoal);
+      line-height: 1;
+    }
+
+    .g-stat-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+
+    /* ── MOMENT OF BEING SEEN ── */
+    .seen-banner {
+      max-width: 1200px;
+      margin: 0 auto 48px;
+      padding: 0 24px;
+    }
+
+    .seen-inner {
+      background: linear-gradient(135deg, rgba(244,151,142,0.1) 0%, rgba(218,173,175,0.08) 100%);
+      border: 1px solid rgba(244,151,142,0.2);
+      border-radius: 20px;
+      padding: 28px 36px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .seen-icon {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      animation: sway 4s ease-in-out infinite;
+    }
+
+    .seen-text {
+      flex: 1;
+    }
+
+    .seen-text strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--charcoal);
+      margin-bottom: 4px;
+    }
+
+    .seen-text p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .seen-resonance {
+      flex-shrink: 0;
+      text-align: right;
+    }
+
+    .resonance-count {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--pink-sorbet);
+      line-height: 1;
+    }
+
+    .resonance-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ── SECTION LABEL ── */
+    .section-label {
+      max-width: 1200px;
+      margin: 60px auto 20px;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .section-label h2 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: var(--charcoal);
+    }
+
+    .section-line {
+      flex: 1;
+      height: 1px;
+      background: rgba(218,173,175,0.3);
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bloomIn {
+      from { opacity: 0; transform: scale(0.88) translateY(14px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    @keyframes sway {
+      0%, 100% { transform: rotate(-3deg); }
+      50%       { transform: rotate(3deg); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    @keyframes sparkPulse {
+      0%, 100% { box-shadow: 0 0 0 3px rgba(244,151,142,0.2); }
+      50%       { box-shadow: 0 0 0 7px rgba(244,151,142,0.0); }
+    }
+
+    @keyframes fillGrow {
+      from { width: 0%; }
+      to   { width: 68%; }
+    }
+
+    @keyframes heartAppear {
+      from { transform: scale(0); }
+      to   { transform: scale(1); }
+    }
+
 
         footer { 
             padding: var(--space-8); 
