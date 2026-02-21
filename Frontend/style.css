@@ -949,7 +949,7 @@
         }
         }
         
-        @media (min-width: 400px) {
+        @media (max-width: 450px) {
                     .garden-viz {
                       width: 600px;
                       margin-left: -150px;
