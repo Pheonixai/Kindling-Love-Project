@@ -23,6 +23,8 @@ Document - https://docs.google.com/document/d/1jRVR9ycD1vFRID3hNQyJAocZVh3TF1Nmh
 
 Blog Link - https://dev.to/fatihat_akinwunmi_bde40f0/i-built-a-website-for-people-that-are-out-of-love-20f4
 
+Presentation Link - https://gxunjlst.gensparkspace.com/
+
 Design Document - https://docs.google.com/document/d/1FKs8DCOKQXL7vzuxrV18N3Ext8lRB8awrJnaAzFj6Bg/edit?usp=sharing
 
 ---
