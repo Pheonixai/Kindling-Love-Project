@@ -1,4 +1,9 @@
+/* ============================================================
+   Kindling — Love Garden  |  garden.js
+   Vanilla JS — all interactivity
+   ============================================================ */
 
+// ── DATA ──────────────────────────────────────────────────────
 const BLOOMS = [
   { id: 1, emoji: '🌷', quote: "I wish someone noticed when I'm holding back tears and still showing up.",            resonance: 61,  age: '3h ago',  spark: true,  type: 'blooming' },
   { id: 2, emoji: '🌼', quote: "How hard I try even when no one's watching.",                                        resonance: 45,  age: '5h ago',  spark: false, type: 'full'     },
@@ -503,3 +508,134 @@ function openPlantModal() {
   }
 
   textarea.addEventListener('input', updateSubmit);
+  textarea.addEventListener('focus', () => textarea.style.borderColor = 'var(--pink-sorbet)');
+  textarea.addEventListener('blur',  () => textarea.style.borderColor = 'rgba(218,173,175,0.3)');
+
+  submitBtn.addEventListener('click', () => {
+    const text = textarea.value.trim();
+    if (!text || text.length > MAX) return;
+    close();
+    plantBloom(text, selectedEmoji);
+  });
+
+  setTimeout(() => textarea.focus(), 380);
+}
+
+// ── PLANT A NEW BLOOM ─────────────────────────────────────────
+function plantBloom(text, emoji) {
+  const newBloom = {
+    id:        Date.now(),
+    emoji,
+    quote:     text,
+    resonance: 0,
+    age:       'just now',
+    spark:     false,
+    type:      'new',
+  };
+
+  state.blooms.unshift(newBloom);
+
+  // If filter would hide it, reset to 'all'
+  if (state.filter === 'full') {
+    state.filter = 'all';
+    filterBtns.forEach(b => {
+      b.classList.toggle('active', b.textContent.trim().toLowerCase() === 'all');
+    });
+  }
+
+  renderGrid();
+
+  // Highlight the new card
+  const newCard = grid.querySelector(`[data-id="${newBloom.id}"]`);
+  if (newCard) {
+    newCard.style.outline       = '2px solid rgba(244,151,142,0.45)';
+    newCard.style.outlineOffset = '3px';
+    newCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    setTimeout(() => { newCard.style.outline = 'none'; newCard.style.outlineOffset = '0'; }, 2200);
+  }
+
+  syncStats();
+  showToast('Your seed was planted 🌱 It may bloom for someone who needs it.');
+}
+
+// ── SCROLL REVEAL ─────────────────────────────────────────────
+function initScrollReveal() {
+  const targets = [
+    '.section-label',
+    '.seen-banner',
+    '.garden-wrapper',
+    '.garden-growth',
+  ];
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity   = '1';
+        entry.target.style.transform = 'translateY(0)';
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  targets.forEach(sel => {
+    document.querySelectorAll(sel).forEach(el => {
+      el.style.opacity    = '0';
+      el.style.transform  = 'translateY(22px)';
+      el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+      obs.observe(el);
+    });
+  });
+}
+
+// ── GROWTH BAR ────────────────────────────────────────────────
+function initGrowthBar() {
+  const fill = document.querySelector('.growth-fill');
+  if (!fill) return;
+  fill.style.animation = 'none';
+  fill.style.width     = '0%';
+
+  const obs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      fill.style.transition = 'width 1.9s cubic-bezier(0.4,0,0.2,1)';
+      fill.style.width      = '68%';
+      obs.disconnect();
+    }
+  }, { threshold: 0.5 });
+  obs.observe(fill);
+}
+
+// ── SEEN BANNER COUNT-UP ──────────────────────────────────────
+function initSeenBanner() {
+  if (!resCountEl) return;
+  const target = parseInt(resCountEl.textContent) || 38;
+  resCountEl.textContent = '0';
+  const obs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      animateCount(resCountEl, target);
+      obs.disconnect();
+    }
+  }, { threshold: 0.8 });
+  obs.observe(resCountEl);
+}
+
+// ── LIVE HERO COUNTER (ambient) ───────────────────────────────
+function initLiveCounter() {
+  if (!heroStatEl) return;
+  setInterval(() => {
+    if (Math.random() > 0.55) {
+      const cur = parseInt(heroStatEl.textContent.replace(/[^0-9]/g, '')) || 1204;
+      heroStatEl.textContent = `${fmt(cur + 1)} blooms growing right now`;
+      heroStatEl.style.color = 'var(--pink-sorbet)';
+      setTimeout(() => { heroStatEl.style.color = ''; }, 900);
+    }
+  }, 9000);
+}
+
+// ── INIT ──────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  injectStyles();
+  renderGrid();
+  initScrollReveal();
+  initGrowthBar();
+  initSeenBanner();
+  initLiveCounter();
+});
