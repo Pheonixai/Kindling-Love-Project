@@ -60,3 +60,15 @@ Typography is based on Inter, chosen for clarity and neutrality. Light headline 
 The layout uses rounded geometry, generous spacing, and glassmorphic navigation to create structure without dominance. Subtle motion and organic animations in the Love Garden visualization reinforce the metaphor of shared empathy rather than gamified interaction.
 
 All styling decisions prioritize calmness, clarity, and emotional safety.
+
+**⚙️ JavaScript Architecture**
+---
+Kindling is powered by a custom State-Management Engine that handles real-time interactivity without external libraries.
+
+Dynamic Rendering: The Garden UI is managed by a renderGrid() function that maps the state.blooms array to the DOM, enabling instant updates when a user "plants a seed".
+
+Timed Logic: The "Mutual Spark" chat features a precise setInterval countdown synced with an SVG progress ring and a simulated auto-reply bot.
+
+Visual Polish: A custom-built Particle Engine handles heart-burst animations, while the Intersection Observer API provides smooth scroll-reveal effects for optimal performance.
+
+Input Validation: Real-time character counters and "submit-gates" ensure that all anonymous posts meet length requirements before being added to the state.
